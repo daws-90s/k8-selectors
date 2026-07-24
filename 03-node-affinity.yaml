@@ -14,7 +14,7 @@ spec:
             - us-east-1c
             - us-east-1b
       preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 50
+      - weight: 500
         preference:
           matchExpressions:
           - key: topology.kubernetes.io/zone
