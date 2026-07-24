@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-tolerated # pod name
+  labels:
+    project: roboshop
+    environment: dev
+    purpose: poc
+spec:
+  containers:
+  - name: nginx # container name
+    image: nginx # by default it will get from docker hub
+  tolerations:
+  - key: "hardware"
+    operator: "Equal"
+    value: "gpu"
+    effect: "NoExecute"
+  
